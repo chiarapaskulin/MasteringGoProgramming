@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Singleton/logger"
+	hlogger "MasteringGoProgramming/4.Object-Oriented_Patterns/Singleton/Logger"
 	"fmt"
 	"net/http"
 )
