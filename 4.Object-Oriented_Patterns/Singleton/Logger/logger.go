@@ -1,4 +1,4 @@
-package logger
+package Logger
 
 import (
 	"log"
@@ -6,15 +6,15 @@ import (
 	"sync"
 )
 
-type hydraLogger struct {
+type hLogger struct {
 	*log.Logger
 	filename string
 }
 
-var hlogger *hydraLogger
+var hlogger *hLogger
 var once sync.Once
 
-func GetInstance() *hydraLogger {
+func GetInstance() *hLogger {
 	//only 1 execution:
 	once.Do(func() {
 		hlogger = createLogger("hydralogger.log")
@@ -22,10 +22,10 @@ func GetInstance() *hydraLogger {
 	return hlogger
 }
 
-func createLogger(fname string) *hydraLogger {
+func createLogger(fname string) *hLogger {
 	file, _ := os.OpenFile(fname, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0777)
 
-	return &hydraLogger{
+	return &hLogger{
 		filename: fname,
 		Logger:   log.New(file, "Hydra ", log.Lshortfile),
 	}
