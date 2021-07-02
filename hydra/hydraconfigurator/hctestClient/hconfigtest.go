@@ -1,7 +1,7 @@
 package main
 
 import (
-	"MasteringGoProgramming/hydra/hydraconfigurator"
+	"MasteringGoProgramming/Hydra/hydraconfigurator"
 	"fmt"
 )
 
@@ -14,8 +14,8 @@ type Confstruct struct {
 
 func main() {
 	configstruct := new(Confstruct)
-	hydraconfigurator.GetConfiguration(hydraconfigurator.CUSTOM, configstruct, "configfile.conf")
-	hydraconfigurator.GetConfiguration(hydraconfigurator.XML, configstruct, "configfile.json")
+	//hydraconfigurator.GetConfiguration(hydraconfigurator.CUSTOM, configstruct, "configfile.conf")
+	//hydraconfigurator.GetConfiguration(hydraconfigurator.XML, configstruct, "configfile.json")
 	hydraconfigurator.GetConfiguration(hydraconfigurator.XML, configstruct, "configfile.xml")
 	fmt.Println(*configstruct)
 

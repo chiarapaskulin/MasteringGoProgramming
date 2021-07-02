@@ -14,12 +14,11 @@ var logger = hlogger.GetInstance()
 //Start hydra chat
 func Run(connection string) error {
 	l, err := net.Listen("tcp", connection)
+	r := CreateRoom("HydraChat")
 	if err != nil {
 		logger.Println("Error connecting to chat client", err)
 		return err
 	}
-
-	r := CreateRoom("HydraChat")
 
 	go func() {
 		// Handle SIGINT and SIGTERM.

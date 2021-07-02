@@ -8,7 +8,6 @@ import (
 	"net"
 	"os"
 	"time"
-	//"Hydra/HydraConfigurator"
 )
 
 func main() {

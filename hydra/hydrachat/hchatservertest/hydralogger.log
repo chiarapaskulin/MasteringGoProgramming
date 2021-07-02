@@ -1,4 +1,0 @@
-Hydra rooms.go:66: Starting chat room HydraChat
-Hydra hydrachat.go:52: Received request from client 127.0.0.1:50414
-Hydra rooms.go:32: Adding client 127.0.0.1:50414
-Hydra rooms.go:51: Removing client 

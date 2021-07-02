@@ -1,6 +1,9 @@
 package hydradblayer
 
-/*
+import (
+	"testing"
+)
+
 func BenchmarkMySQLDBReads(b *testing.B) {
 	dblayer, err := ConnectDatabase("mysql", "gouser:gouser@/Hydra")
 	if err != nil {
@@ -30,5 +33,3 @@ func allMembersBM(b *testing.B, dblayer DBLayer) {
 		}
 	}
 }
-
-*/
